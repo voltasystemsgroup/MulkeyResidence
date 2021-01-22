@@ -1,0 +1,264 @@
+[Toolbox Install Info]
+
+  Install Path: C:\Program Files (x86)\Crestron\Toolbox
+
+Data:
+                             Devices.rzinis:  140515         C:\Program Files (x86)\Crestron\Cresdb\Toolbox\Devices.rzinis
+                             Devices.rzinis:  150528         C:\Program Files (x86)\Crestron\Toolbox\Data\Devices.rzinis
+
+
+  Crestron Software:
+
+        Crestron Core 3 UI Controls........:  2.06.06.03     C:\Program Files (x86)\Crestron\Cresdb
+        Crestron D-Nav Controls............:  1.00.18        Unavailable
+        Crestron D3 Pro....................:  3.02.002.00    C:\Program Files (x86)\Crestron\D3 Pro
+        Crestron D3 Pro Templates (Destiny:Black-Blue):  2.02.020.00    C:\Program Files (x86)\Crestron\Cresdb\Templates\D3 Pro
+        Crestron Database..................:  51.00.003.00   C:\Program Files (x86)\Crestron\Cresdb
+        Crestron Digital Media Tools.......:  3.01.01        Unavailable
+        Crestron Engraver..................:  5.4.23.05      C:\Program Files (x86)\Crestron\Engraver
+        Crestron iLux Designer.............:  2.01.04.06     Unavailable
+        Crestron MasterInstaller...........:  3.00.09.00     C:\Program Files\Crestron\MasterInstaller
+        Crestron SystemBuilder.............:  3.13.014.00    C:\Program Files (x86)\Crestron\SystemBuilder
+        Crestron SystemBuilder Templates...:  3.13.001.01    Unavailable
+        Crestron SystemBuilder Templates (Destiny:Black-Blue):  3.13.001.01    C:\Program Files (x86)\Crestron\Cresdb\Templates\SystemBuilder
+        Crestron SystemBuilder Theme (Destiny:Black-Green):  3.13.001.01    C:\Program Files (x86)\Crestron\Cresdb\Templates\SystemBuilder
+        Crestron SystemBuilder Theme (Destiny:Frosted Glass Dark):  3.13.001.01    C:\Program Files (x86)\Crestron\Cresdb\Templates\SystemBuilder
+        Crestron SystemBuilder Theme (Destiny:Frosted Glass Light):  3.13.001.01    C:\Program Files (x86)\Crestron\Cresdb\Templates\SystemBuilder
+
+        Crestron Toolbox...................:  2.40.219.00    C:\Program Files (x86)\Crestron\Toolbox
+            +BPC8 Tool                     :  2.40.219.00    C:\Program Files (x86)\Crestron\Toolbox
+            +Complete Shell                :  2.40.219.00    Unavailable
+            +DVPHD Tools                   :  2.40.219.00    C:\Program Files (x86)\Crestron\Toolbox
+            +Front End                     :  2.40.219.00    Unavailable
+            +Minimal Shell                 :  2.40.219.00    Unavailable
+            +Procise Tools                 :  2.40.219.00    C:\Program Files (x86)\Crestron\Toolbox
+            +Prodigy Tools                 :  2.40.219.00    C:\Program Files (x86)\Crestron\Toolbox
+            +ProSound Tools                :  2.40.219.00    C:\Program Files (x86)\Crestron\Toolbox
+            +Server                        :  2.40.219.00    C:\Program Files (x86)\Crestron\Toolbox
+
+        D3 Pro Templates (Destiny).........:  2.02.020.00    Unavailable
+        DEAL For Windows...................:  4.02.04        Unavailable
+        Device Database....................:  65.00.002.00   Unavailable
+        SIMPL Windows......................:  4.02.65.01     Unavailable
+        SIMPL Windows Library..............:  508            Unavailable
+        SIMPL+ Cross Compiler..............:  1.3            Unavailable
+        Smart Graphics Templates...........:  2.01.11        Unavailable
+        Touchpanel Graphics................:  1.00.01.1526   C:\Program Files (x86)\Crestron\Cresdb\Images\Touchpanel Graphics
+        VisionTools Pro-e..................:  5.9.04.01      C:\Program Files (x86)\Crestron\VtPro-e
+
+
+  Operating System:
+
+        Windows Version:  Microsoft Windows 7 Professional  Service Pack 1
+             IE Version:  9.11.9600
+                    CPU:  Intel(R) Core(TM) i7-3820QM CPU @ 2.70GHz (x2) @ 2693 MHz
+        Physical Memory:  6367 MB / 8191 MB
+         Virtual Memory:  1590 MB / 2047 MB
+           Admin Rights:  Yes
+
+[Product Info]
+DeviceName=SWAMP
+DeviceCategory=Ethernet Control Module
+DeviceVersion=4.002.164012381 (Jun 28 2012)
+SerialNumber=7617737
+
+[Ethernet]
+NumberOfPorts=1
+LanA.IPAddress=192.168.0.140
+LanA.MACAddress=00.10.7f.1f.02.77
+LanA.IPMask=255.255.255.0
+LanA.NegotiationSpeed=0
+LanA.NegotiationDuplex=TRUE
+LanA.Link=FALSE
+DefaultRouter=192.168.0.1
+Hostname=SWAMP
+Domain=
+DHCPEnabled=FALSE
+SSLEnabled=FALSE
+SSLCASigned=FALSE
+CIPEnable=FALSE
+PrimaryDNS=
+
+[Device IDs]
+TSID=00743CC9
+CresnetID=161
+
+[Error Log]
+
+System log:
+
+  1. Notice: Disabling Cresnet Peer Interface as Peer IP Table Entry present.
+     TimeStamp: 00:00:00  1-01-02   UpTime: 0 days 00:00:00.039  Task: IdleTask
+  2. Notice:  Remove Peer IP Table entry for Cresnet Peer communication
+     TimeStamp: 00:00:00  1-01-02   UpTime: 0 days 00:00:00.039  Task: IdleTask
+  3. Notice: System startup: SWAMP Cntrl Eng [v4.002.164012381 (Jun 28 2012), #00743CC9]
+     TimeStamp: 00:00:30  1-01-02   UpTime: 0 days 00:00:30.031  Task: IdleTask
+  4. Notice: Previous Reboot: Power Cycle/HW-R Button
+     TimeStamp: 00:00:30  1-01-02   UpTime: 0 days 00:00:30.031  Task: IdleTask
+Total Errors Logged = 4
+End of System log
+
+[System Clock]
+TimeDate=1:50:28 1-1-2002
+SystemUpTime.Days=0
+SystemUpTime.HundredthsSecs=663602
+ProgramUpTime.Days=-1
+ProgramUpTime.HundredthsSecs=-1
+
+[IP Table]
+IP ID   Address             Entry Type  Dev ID  Port    Connection Type     Status      Fixed   
+40      192.168.000.200     master      04      41794   gway                offline             
+
+[Firmware Capabilities]
+  Category:          Digital Media Switcher
+  DisplayList:       NOT SUPPORTED
+  Web Server:        Enabled: Level 1
+  FTP Transfers:     NOT SUPPORTED
+  Ethernet Ports:    1: 1
+  Ethernet Active:   Yes
+  IP Table:          Yes
+  IP Table Format:   DIP: Level 2
+  IP Masters:        0
+  Max IP Entries:    1
+  Curr IP Entries:   1
+  DHCP Support:      Yes
+  Password:          Yes
+  LCD Front Panel:   Yes
+  Front Panel Slot:  36
+  NVRAM Size:        0
+  NVRAM Used (Prog): 0
+ NVMemory Slot Map Settings 
+ Num Digital Joins Supported: 1000
+ Num Analog  Joins Supported: 2000
+ Num Serial  Joins Supported: 256
+ Max Serial Parameter Length: 256
+  Compact Flash:     NOT SUPPORTED
+  MMC:               NOT SUPPORTED
+  FirmwarePrefix:    DMSWITCH
+  Boot mode:         MASTER
+  PnP Address:       00 74 3C C9      VALID  (CSlave mode only)
+  PnP support:       Level 1
+  Dynamic Prot area: Level 1
+  SSL support:       SUPPORTED: Level 1
+  RConsole support:  SUPPORTED: Level 2
+  Network Analyzer:  NOT SUPPORTED
+  NPA Support:       NOT SUPPORTED
+  System Monitor:    SUPPORTED: Level 0
+  USB support:       Level 2
+  TJI support:       Level 4
+ RTJI support:       Level 2
+  MDBGSIGNAL:        SUPPORTED: Level 2
+  SUBMODEL:          DM-UNKNOWN
+
+[Hardware Info]
+Current Hardware Configuration
+  Processor Type:    SWAMP
+  Compact Flash:     NOT SUPPORTED
+  Num YBus Slots:    36
+  Num ZBus Slots:    0
+   1: C2I-SWAMP-MAIN AUDIO
+   2: C2I-SWAMP-SOURCES
+   3: C2I-SWAMP-MASTER ZONES
+  33: C2I-NVMEM
+  34: Cresnet
+  35: C2I-ADGENET-1
+  36: SWAMP-FPANEL
+  FLASH Mfg / Type:  89 / 0
+  FLASH Total Size:  16 MB
+  FLASH Num Banks:   1
+  DRAM Total Size:   32 MB
+
+[Card Info]
+
+   1: C2I-SWAMP-MAIN AUDIO
+   2: C2I-SWAMP-SOURCES
+   3: C2I-SWAMP-MASTER ZONES
+  33: C2I-NVMEM
+  35: C2I-ADGENET-1
+  36: SWAMP-FPANEL
+
+[Expanders.Product Info]
+DeviceName=
+DeviceCategory=
+DeviceVersion=0
+SerialNumber=7617737
+
+[Expanders_DSP.Product Info]
+DeviceName=
+DeviceCategory=
+DeviceVersion=0
+SerialNumber=7617737
+
+[Expanders_FPGA.Product Info]
+DeviceName=
+DeviceCategory=
+DeviceVersion=0
+SerialNumber=7617737
+
+[Front_Panel_Engine.Product Info]
+DeviceName=SWAMP_FPANEL_ENGINE
+DeviceCategory=Firmware Module
+DeviceVersion=3.005.0024
+SerialNumber=7617737
+
+[Zones.Product Info]
+DeviceName=C2I-SWAMP-MASTER
+DeviceCategory=Plugin Control Card
+DeviceVersion=
+SerialNumber=
+
+[Zones.Firmware Capabilities]
+
+[Zones.Hardware Info]
+
+[Zones.Card Info]
+ 1: SWAMP_MASTER_ZONE_CONTROLS [1.000.0000] 2: SWAMP_MASTER_ZONE_CONTROLS [1.000.0000] 3: SWAMP_MASTER_ZONE_CONTROLS [1.000.0000] 4: SWAMP_MASTER_ZONE_CONTROLS [1.000.0000] 5: SWAMP_MASTER_ZONE_CONTROLS [1.000.0000] 6: SWAMP_MASTER_ZONE_CONTROLS [1.000.0000] 7: SWAMP_MASTER_ZONE_CONTROLS [1.000.0000] 8: SWAMP_MASTER_ZONE_CONTROLS [1.000.0000]
+
+[Zones.Zone-1.Product Info]
+DeviceName=SWAMP_MASTER_ZONE_CONTROLS
+DeviceCategory=Plugin Control Card
+DeviceVersion=1.000.0000
+SerialNumber=
+
+[Zones.Zone-2.Product Info]
+DeviceName=SWAMP_MASTER_ZONE_CONTROLS
+DeviceCategory=Plugin Control Card
+DeviceVersion=1.000.0000
+SerialNumber=
+
+[Zones.Zone-3.Product Info]
+DeviceName=SWAMP_MASTER_ZONE_CONTROLS
+DeviceCategory=Plugin Control Card
+DeviceVersion=1.000.0000
+SerialNumber=
+
+[Zones.Zone-4.Product Info]
+DeviceName=SWAMP_MASTER_ZONE_CONTROLS
+DeviceCategory=Plugin Control Card
+DeviceVersion=1.000.0000
+SerialNumber=
+
+[Zones.Zone-5.Product Info]
+DeviceName=SWAMP_MASTER_ZONE_CONTROLS
+DeviceCategory=Plugin Control Card
+DeviceVersion=1.000.0000
+SerialNumber=
+
+[Zones.Zone-6.Product Info]
+DeviceName=SWAMP_MASTER_ZONE_CONTROLS
+DeviceCategory=Plugin Control Card
+DeviceVersion=1.000.0000
+SerialNumber=
+
+[Zones.Zone-7.Product Info]
+DeviceName=SWAMP_MASTER_ZONE_CONTROLS
+DeviceCategory=Plugin Control Card
+DeviceVersion=1.000.0000
+SerialNumber=
+
+[Zones.Zone-8.Product Info]
+DeviceName=SWAMP_MASTER_ZONE_CONTROLS
+DeviceCategory=Plugin Control Card
+DeviceVersion=1.000.0000
+SerialNumber=
+

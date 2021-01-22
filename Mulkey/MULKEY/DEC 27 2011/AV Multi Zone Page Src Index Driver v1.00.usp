@@ -1,0 +1,62 @@
+
+#DEFINE_CONSTANT MAX_IO 64
+
+DIGITAL_INPUT ENABLE, REPROP;
+ANALOG_INPUT LAST_AVZ_INDEX, SRC_INDEX;
+ANALOG_INPUT AVZ_SRC_INDEX[ MAX_IO ];
+
+
+ANALOG_OUTPUT SRC_PAGE_INDEX, SRC_INDEX_FB;
+
+
+Integer gnSrcPageIndex;
+
+
+CHANGE SRC_INDEX
+{
+	If( ENABLE && LAST_AVZ_INDEX )
+	{
+		gnSrcPageIndex = SRC_INDEX;
+		
+		SRC_PAGE_INDEX = gnSrcPageIndex;
+	}		
+}
+
+CHANGE AVZ_SRC_INDEX
+{
+	Integer nLMAI;
+	
+	If( ENABLE && LAST_AVZ_INDEX )
+	{	
+		nLMAI = GetLastModifiedArrayIndex( );
+		
+		If( ( nLMAI = LAST_AVZ_INDEX ) )
+		{
+			gnSrcPageIndex = AVZ_SRC_INDEX[ LAST_AVZ_INDEX ];
+			
+			SRC_PAGE_INDEX = gnSrcPageIndex;
+			SRC_INDEX_FB = gnSrcPageIndex;		
+		}
+	}
+}
+
+CHANGE LAST_AVZ_INDEX
+{
+	If( ENABLE && LAST_AVZ_INDEX )
+	{	
+		SRC_INDEX_FB = AVZ_SRC_INDEX[ LAST_AVZ_INDEX ];	
+	}	
+}
+
+PUSH REPROP
+{
+	If( ENABLE && LAST_AVZ_INDEX )
+	{
+		gnSrcPageIndex = AVZ_SRC_INDEX[ LAST_AVZ_INDEX ];
+		
+		SRC_PAGE_INDEX = gnSrcPageIndex;
+	}	
+}
+
+
+

@@ -1,0 +1,33 @@
+
+#DEFINE_CONSTANT MAX_IO 64
+
+
+DIGITAL_INPUT HELD;
+DIGITAL_INPUT ENABLE_FB[ MAX_IO ], SELECT_FB[ MAX_IO ];
+
+DIGITAL_OUTPUT AVZ_ALL, AVZ_CLEAR;
+
+
+
+PUSH HELD
+{   
+	Integer nCount, nEnableCount, nSelectCount;
+	
+	nEnableCount = 0;
+	nSelectCount = 0;
+	
+	For( nCount = 1 To MAX_IO )
+	{
+		If( ENABLE_FB[ nCount ] ) nEnableCount = nEnableCount + 1;
+		If( SELECT_FB[ nCount ] ) nSelectCount = nSelectCount + 1;
+	}
+	
+	If( nSelectCount < nEnableCount/2 )
+		Pulse( 1, AVZ_ALL );
+	Else
+		Pulse( 1, AVZ_CLEAR );
+}
+
+
+
+

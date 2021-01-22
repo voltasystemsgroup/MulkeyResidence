@@ -1,0 +1,124 @@
+
+#DEFINE_CONSTANT MAX_IO 64
+
+ANALOG_OUTPUT FIRST_INDEX, LAST_INDEX;
+
+DIGITAL_INPUT INDEX_FB[ MAX_IO ];
+ANALOG_OUTPUT ORDER_POS[ MAX_IO ];
+
+
+Integer gnInitComplete;
+Integer DS[ MAX_IO ], ItemsInDS;
+
+Function UpdateFB( )
+{
+	Integer nCount;
+	
+	For( nCount = 1 To MAX_IO )
+	{
+		If( IsSignalDefined( ORDER_POS[ nCount ] ) )
+			If( ORDER_POS[ nCount ] != DS[ nCount ] )
+				ORDER_POS[ nCount ] = DS[ nCount ];
+	}
+	
+	If( FIRST_INDEX != DS[ 1 ] )
+		FIRST_INDEX = DS[ 1 ];
+	
+	If( ItemsInDS )
+	{
+		If( LAST_INDEX != DS[ ItemsInDS ] )
+			LAST_INDEX = DS[ ItemsInDS ];
+	}
+	Else
+	{
+		LAST_INDEX = 0;
+	}
+}
+
+Function ClearDS( )
+{
+	Integer nCount;
+	
+	For( nCount = 1 To MAX_IO )
+	{
+		DS[ nCount ] = 0;
+	}
+	
+	ItemsInDS = 0;
+	
+	UpdateFB( );
+}
+
+Function CleanDS( Integer nPos )
+{
+	Integer nCount;
+	
+	For( nCount = nPos To MAX_IO )
+	{
+		DS[ nCount ] = DS[ nCount + 1 ];
+		
+		If( nCount < MAX_IO )
+		{
+			If( DS[ nCount + 1 ] = 0 )
+			{
+				Break;
+			}
+		}
+		Else If( nCount = MAX_IO )
+		{
+			Break;
+		}
+	}
+	
+	ItemsInDS = ItemsInDS - 1;
+	
+	UpdateFB( );
+}
+
+PUSH INDEX_FB
+{
+	Integer nIndex;
+	
+	If( gnInitComplete )
+	{
+		nIndex = GetLastModifiedArrayIndex( );
+		
+		ItemsInDS = ItemsInDS + 1;
+		
+		DS[ ItemsInDS ] = nIndex;
+		
+		UpdateFB( );
+	}
+}
+
+RELEASE INDEX_FB
+{
+	Integer nIndex, nCount;
+	
+	If( gnInitComplete )
+	{
+		nIndex = GetLastModifiedArrayIndex( );
+	
+		For( nCount = 1 To MAX_IO )
+		{
+			If( DS[ nCount ] = nIndex )
+			{
+				DS[ nCount ] = 0;
+				
+				Break;
+			}
+		}
+		
+		CleanDS( nCount );
+	}
+}
+
+Function Main( )
+{
+    gnInitComplete = 0;
+	gnInitComplete = !WaitForInitializationComplete( );
+	
+	ClearDS( );
+}
+
+	

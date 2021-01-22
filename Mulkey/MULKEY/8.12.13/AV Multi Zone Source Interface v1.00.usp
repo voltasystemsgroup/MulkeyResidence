@@ -1,0 +1,134 @@
+
+#DEFINE_CONSTANT MAX_AVZ	64
+#DEFINE_CONSTANT MAX_SRC	32
+
+
+
+DIGITAL_INPUT   ENABLE_MULTI_SELECT,
+				AVZ_CLEAR,
+				AVZ_ALL,
+				SRC_0;				
+DIGITAL_INPUT 	SRC[ MAX_SRC ],
+				AVZ[ MAX_AVZ ],
+				AVZ_ENABLE[ MAX_AVZ ];
+
+ANALOG_INPUT	AVZ_INDEX,
+				SRC_INDEX,
+				AVZ_INDEX_FB;
+
+DIGITAL_OUTPUT	AVZ_FB[ MAX_AVZ ];
+							
+ANALOG_OUTPUT	AVZ_SRC_INDEX_OUT[ MAX_AVZ ];
+
+Integer gnSRC;
+Integer gnAVZ[ MAX_AVZ ];
+
+
+Function AVZSet( Integer nIndex )
+{
+	Integer nAVZIndex;	
+	
+	gnAVZ[ 0 ] = nIndex;
+	
+	For( nAVZIndex = 1 To MAX_AVZ )
+	{
+		gnAVZ[ nAVZIndex ] = 0;
+		AVZ_FB[ nAVZIndex ] = 0;
+	}
+	
+	If( gnAVZ[ 0 ] )
+	{
+		gnAVZ[ gnAVZ[ 0 ] ] = 1;
+		AVZ_FB[ gnAVZ[ 0 ] ] = 1;
+	}
+}
+
+Function SRCSet( Integer nIndex )
+{
+	Integer nAVZIndex;
+	
+	For( nAVZIndex = 1 To MAX_AVZ )
+	{
+		If( gnAVZ[ nAVZIndex ] )
+		{
+			AVZ_SRC_INDEX_OUT[ nAVZIndex ] = nIndex;
+		}
+	}	
+}
+
+PUSH SRC_0
+{
+	SRCSet( 0 );
+}
+
+PUSH SRC
+{
+	Integer nSRCIndex;
+	
+	nSRCIndex = GetLastModifiedArrayIndex( );
+		
+	SRCSet( nSRCIndex );	
+}
+
+CHANGE SRC_INDEX
+{
+	SRCSet( SRC_INDEX );
+}
+
+PUSH AVZ_CLEAR
+{
+	AVZSet( 0 );	
+}
+
+PUSH AVZ_ALL
+{
+	Integer nAVZIndex;	
+	
+	If( ENABLE_MULTI_SELECT )
+	{	
+		For( nAVZIndex = 1 To MAX_AVZ )
+		{
+			If( AVZ_ENABLE[ nAVZIndex ] )
+			{
+				gnAVZ[ nAVZIndex ] = 1;
+				AVZ_FB[ nAVZIndex ] = gnAVZ[ nAVZIndex ];
+			}
+		}
+	}	
+}
+
+CHANGE AVZ_INDEX
+{
+	AVZSet( AVZ_INDEX );
+}
+
+PUSH AVZ
+{
+	Integer nAVZIndex;
+	
+	nAVZIndex = GetLastModifiedArrayIndex( );
+	
+	If( ENABLE_MULTI_SELECT )
+	{	
+		gnAVZ[ nAVZIndex ] = !gnAVZ[ nAVZIndex ];
+		AVZ_FB[ nAVZIndex ] = gnAVZ[ nAVZIndex ];
+	}
+	Else
+	{
+		If( gnAVZ[ 0 ] && ( gnAVZ[ 0 ] != nAVZIndex ) )
+		{
+			gnAVZ[ gnAVZ[ 0 ] ] = 0;
+			AVZ_FB[ gnAVZ[ 0 ] ] = 0;		
+		}
+		gnAVZ[ 0 ] = nAVZIndex;
+		gnAVZ[ nAVZIndex ] = 1;
+		AVZ_FB[ nAVZIndex ] = gnAVZ[ nAVZIndex ];
+	}
+}
+
+Function Main( )
+{
+	AVZSet( 0 );
+}
+
+

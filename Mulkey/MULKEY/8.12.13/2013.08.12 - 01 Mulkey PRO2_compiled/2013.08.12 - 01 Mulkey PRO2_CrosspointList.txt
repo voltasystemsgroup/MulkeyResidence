@@ -1,0 +1,48 @@
+Crosspoint listing for C:\Users\Patrick Liedtke\Documents\Crestron Client Programs\Clients\MULKEY\8.12.13\2013.08.12 - 01 Mulkey PRO2_compiled\2013.08.12 - 01 Mulkey PRO2.SMW
+
+Note:  Crosspoint symbols with EquipID or ControlID set to 0d are not routeable.
+       Crosspoint values are restricted to 0d through 59999d.  60000d and above is reserved for usage by processor firmware.
+
+Equipment Crosspoint Routing.                                                                       EquipID
+===========================================================================================================
+S-29.2 in macro S-2.1.4.2.9.2:S-2 (Module File C:\Program Files (x86)\Crestron\Cresdb\Modu          0
+les\XM (CEN-TRACK) Hardware Interface v2.0.cmc)                                                     
+S-18.1 in macro S-2.1.4.2.9.2:S-3 (Module File C:\Program Files (x86)\Crestron\Cresdb\Modu          0
+les\AMFM (CEN-TRACK) Hardware Interface v2.0.cmc)                                                   
+S-1.1 in macro S-2.1.4.2.1.1 (Module File C:\Users\Patrick Liedtke\Documents\Crestron Clie          1
+nt Programs\Clients\MULKEY\8.12.13\2013.08.12 - 01 Mulkey PRO2_compiled\Source Control Dev          
+ice xPt. v1.03.umc)                                                                                 
+S-1.1 in macro S-2.1.4.2.2.1 (Module File C:\Users\Patrick Liedtke\Documents\Crestron Clie          2
+nt Programs\Clients\MULKEY\8.12.13\2013.08.12 - 01 Mulkey PRO2_compiled\Source Control Dev          
+ice xPt. v1.03.umc)                                                                                 
+S-1.1 in macro S-2.1.4.2.3.1 (Module File C:\Users\Patrick Liedtke\Documents\Crestron Clie          3
+nt Programs\Clients\MULKEY\8.12.13\2013.08.12 - 01 Mulkey PRO2_compiled\Source Control Dev          
+ice xPt. v1.03.umc)                                                                                 
+S-1.1 in macro S-2.1.4.2.4.1 (Module File C:\Users\Patrick Liedtke\Documents\Crestron Clie          4
+nt Programs\Clients\MULKEY\8.12.13\2013.08.12 - 01 Mulkey PRO2_compiled\Source Control Dev          
+ice xPt. v1.03.umc)                                                                                 
+S-1.1 in macro S-2.1.4.2.5.1 (Module File C:\Users\Patrick Liedtke\Documents\Crestron Clie          5
+nt Programs\Clients\MULKEY\8.12.13\2013.08.12 - 01 Mulkey PRO2_compiled\Source Control Dev          
+ice xPt. v1.03.umc)                                                                                 
+
+Control Crosspoint Routing.                                                                         ControlID
+=============================================================================================================
+S-2.1 in macro S-3.2.1.1.3.1 (Module File C:\Users\Patrick Liedtke\Documents\Crestron Clie          10000
+nt Programs\Clients\MULKEY\8.12.13\2013.08.12 - 01 Mulkey PRO2_compiled\Source Control Int          
+erface xPt. v1.03.umc)                                                                              
+S-2.1 in macro S-3.2.1.2.3.1 (Module File C:\Users\Patrick Liedtke\Documents\Crestron Clie          10001
+nt Programs\Clients\MULKEY\8.12.13\2013.08.12 - 01 Mulkey PRO2_compiled\Source Control Int          
+erface xPt. v1.03.umc)                                                                              
+S-2.1 in macro S-3.2.1.3.3.1 (Module File C:\Users\Patrick Liedtke\Documents\Crestron Clie          10002
+nt Programs\Clients\MULKEY\8.12.13\2013.08.12 - 01 Mulkey PRO2_compiled\Source Control Int          
+erface xPt. v1.03.umc)                                                                              
+S-2.1 in macro S-3.2.1.4.3.1 (Module File C:\Users\Patrick Liedtke\Documents\Crestron Clie          10003
+nt Programs\Clients\MULKEY\8.12.13\2013.08.12 - 01 Mulkey PRO2_compiled\Source Control Int          
+erface xPt. v1.03.umc)                                                                              
+S-2.1 in macro S-3.2.1.5.3.1 (Module File C:\Users\Patrick Liedtke\Documents\Crestron Clie          10004
+nt Programs\Clients\MULKEY\8.12.13\2013.08.12 - 01 Mulkey PRO2_compiled\Source Control Int          
+erface xPt. v1.03.umc)                                                                              
+S-2.1 in macro S-3.2.2.1.3.1 (Module File C:\Users\Patrick Liedtke\Documents\Crestron Clie          11000
+nt Programs\Clients\MULKEY\8.12.13\2013.08.12 - 01 Mulkey PRO2_compiled\Source Control Int          
+erface xPt. v1.03.umc)                                                                              
+

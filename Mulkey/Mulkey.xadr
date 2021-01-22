@@ -1,0 +1,38 @@
+[Crestron_Toolbox_Address_Book]
+
+[Entries]
+This .xadr file was created using Toolbox v2.41 or later.=:slot 01
+It is not compatible with this version of Toolbox.=:slot 02
+Please open a .adr Address Book to continue.=:slot 03
+
+[AddressBookInfo]
+Schema=2.0
+Version=1.0
+DefaultEntry=
+
+[ComSpecs]
+CEN-IDOCV-DSW-00-10-7F-1F-E6-DD_ip=ctp 192.168.0.50
+CEN-TRACK-00107F27ECBA_ip=ctp 192.168.0.201
+DM-MD8x8-00107F27AC86_ip=ctp 192.168.0.150
+DM-RMC-279a31_ip=ctp 192.168.0.167
+DM-RMC-2788c8_ip=ctp 192.168.0.170
+DM-RMC-1f13a8_ip=ctp 192.168.0.168
+PRO2 Cntrl Eng [v4.007.0004 (Mar 05 2012), #005619BE]_ip=ctp 192.168.0.200
+SWAMP_ip=ctp 192.168.0.140
+tps-6l-00-10-7f-26-5c-9e_ip=ctp 192.168.0.54
+TSW-75-7F31A837_ip=auto 192.168.0.203
+TSW-75-7F31A898_ip=auto 192.168.0.202
+
+[Notes]
+CEN-IDOCV-DSW-00-10-7F-1F-E6-DD_ip=
+CEN-TRACK-00107F27ECBA_ip=
+DM-MD8x8-00107F27AC86_ip=
+DM-RMC-279a31_ip=
+DM-RMC-2788c8_ip=
+DM-RMC-1f13a8_ip=
+PRO2 Cntrl Eng [v4.007.0004 (Mar 05 2012), #005619BE]_ip=
+SWAMP_ip=
+tps-6l-00-10-7f-26-5c-9e_ip=
+TSW-75-7F31A837_ip=
+TSW-75-7F31A898_ip=
+
